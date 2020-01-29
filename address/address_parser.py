@@ -1,5 +1,5 @@
 #from address import Address
-import dstk
+import address.dstk
 import os
 
 cwd = os.path.dirname(os.path.realpath(__file__))
@@ -116,7 +116,7 @@ class AddressParser(object):
                 line = line.replace('"', '').replace('\n', '')
                 members = line.split(',')
                 if members[0] in self.zips:
-                    print "Duplicate zip info!", members[0]
+                    print("Duplicate zip info!", members[0])
                 self.zips[members[0]] = {
                     "zip": members[0],
                     "city": members[1],
